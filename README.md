@@ -45,6 +45,6 @@ Stop the running slackBot application for now and lets spin up the database by r
 - docker-compose up
 <p>I am using docker compose to spin up mysql database</p>
 <p>After Spinning the database start the <b>slackBot.exe</b> app and on the channel you created type <b>'[@bot_user] hello'</b></p>
-![sample slack message](https://github.com/hailetotaw/slackBot/blob/master/SlackResponse.JPG)
+![sample](https://github.com/hailetotaw/slackBot/blob/master/SlackResponse.JPG)
  
 
