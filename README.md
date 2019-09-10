@@ -12,7 +12,7 @@ Clone the repo in a folder which is not your GOPATH and run the following comman
 
 - go build
 
-This will create a slackBot.exe file and run that. This will start the server and the boot app will start listening to slack events. 
+This will create a <b>slackBot.exe</b> file and run that. This will start the server and the boot app will start listening to slack events. 
 
 Create a workspace on [slack](https://slack.com/create#email). After creating the worksapce, go to the following [link](https://api.slack.com/apps) and create a slack app.
 After creating the app:
@@ -21,20 +21,29 @@ After creating the app:
  ![Enable Event](https://github.com/hailetotaw/slackBot/blob/master/EnableEvent.JPG)
 - Add a Bot User as shown in the figure below and make sure to turn Always Show My Bot as Online on 
 ![Bot User](https://github.com/hailetotaw/slackBot/blob/master/BotUser.JPG)
-- Under OAuth & Permissions and the scopes as show in the figure below
+- Under OAuth & Permissions add the scopes as show in the figure below
 ![Scope](https://github.com/hailetotaw/slackBot/blob/master/Scopes.JPG)
 - Finally Install the APP on your workspace
 
 After creating the app please set the following environment variables
 
->PORT=5000
->BOT_TOKEN=[Bot User OAuth Access Token]
->VERIFICATION_TOKEN=[OAuth Access Token]]
->BOT_ID=[@bot_user on slack]
->CHANNEL_ID=[@channe on slack]
->BOTDB_USER_PASSWORD=[password]
->BOT_DB_USER=[dbuser]
->DB_PORT=3306
->DB_ADDRESS=[localhost]
->DB_NAME=goBotDB
->GOOGLE_APPLICATION_CREDENTIALS=[follow Google Cloud Set up above]
+> PORT=5000 <br />
+> BOT_TOKEN=[Bot User OAuth Access Token]<br />
+> VERIFICATION_TOKEN=[OAuth Access Token]]<br />
+> BOT_ID=[@bot_user on slack]<br />
+> CHANNEL_ID=[@channe on slack]<br />
+> BOTDB_USER_PASSWORD=[password]<br />
+> BOT_DB_USER=[dbuser]<br />
+> DB_PORT=3306<br />
+> DB_ADDRESS=[localhost]<br />
+> DB_NAME=goBotDB<br />
+> GOOGLE_APPLICATION_CREDENTIALS=[follow Google Cloud Set up above]<br />
+
+<p>Create a channel on slack and set the channel id to <b>CHANNEL_ID</b> environment variable value</p>
+
+Stop the running slackBot application for now and lets spin up the database by running the follwing command from the repo
+- docker-compose up
+<p>I am using docker compose to spin up mysql database</p>
+<p>After Spinning the database start the <b>slackBot.exe</b> app and on the channel you created type <b>'[@bot_user] hello'</b></p>
+ 
+
